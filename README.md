@@ -5,6 +5,21 @@ This project implements a production-grade Cloud Governance, Risk, and Complianc
 
 In an enterprise environment, high-level corporate risk metrics must translate into un-bypassable cloud security controls. This project applies the **Principle of Least Privilege (PoLP)** and zero-trust network architectural concepts to defend sensitive data against credential theft and unauthorized manipulation.
 
+## 📂 Repository Structure
+
+```text
+├── policies/
+│   ├── s3-perimeter-bucket-policy.json     # Layer 3 Enforced Network Boundary
+│   └── financial-admin-trust-policy.json   # IAM Role Trust Relationship Definition
+├── img/
+│   ├── auditor-delete-denied.png           # Visual Proof: Integrity Verification
+│   └── external-ip-admin-denied.png        # Visual Proof: Perimeter Verification
+├── main.tf                                 # Infrastructure-as-Code (Compliance as Code)
+└── README.md                               # GRC Control Framework & Audit Trail Logs
+```
+
+
+
 ## 🛡️ Control Architecture (The 3 Layers)
 The architecture establishes three distinct layers of identity and network boundaries:
 1. **Layer 1: The Auditor Role (Read-Only Control)** – Grants necessary access to inspect compliance without risking data integrity (Confidentiality).
